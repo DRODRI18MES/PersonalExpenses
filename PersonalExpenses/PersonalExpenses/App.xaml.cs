@@ -36,6 +36,7 @@ namespace PersonalExpenses
 		protected override void OnStart ()
 		{
             AppCenter.Start("ios=420f1ba6-0a3c-4789-b6c3-e68d8044cfe8;android=0031f62e-577d-4c3f-81fe-c98f50db165d", typeof(Analytics), typeof(Push), typeof(Crashes));
+            string test = "";
             Analytics.TrackEvent("Start");
             Crashes.TrackError(new Exception("Test exception"));
 		}

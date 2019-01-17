@@ -140,3 +140,11 @@ C:\Users\DRODRI18\Desktop\Trainings\Xamarin\PersonalExpenses\PersonalExpenses\Pe
 C:\Users\DRODRI18\Desktop\Trainings\Xamarin\PersonalExpenses\PersonalExpenses\PersonalExpenses.iOS\obj\iPhoneSimulator\Debug\PersonalExpenses.iOS.exe
 C:\Users\DRODRI18\Desktop\Trainings\Xamarin\PersonalExpenses\PersonalExpenses\PersonalExpenses.iOS\obj\iPhoneSimulator\Debug\PersonalExpenses.iOS.pdb
 C:\Users\DRODRI18\Desktop\Trainings\Xamarin\PersonalExpenses\PersonalExpenses\PersonalExpenses.iOS\bin\iPhoneSimulator\Debug\es-MX\PersonalExpenses.resources.dll
+C:\Users\DRODRI18\Desktop\Trainings\Xamarin\PersonalExpenses\PersonalExpenses\PersonalExpenses.iOS\bin\iPhoneSimulator\Debug\Microsoft.AppCenter.dll
+C:\Users\DRODRI18\Desktop\Trainings\Xamarin\PersonalExpenses\PersonalExpenses\PersonalExpenses.iOS\bin\iPhoneSimulator\Debug\Microsoft.AppCenter.iOS.Bindings.dll
+C:\Users\DRODRI18\Desktop\Trainings\Xamarin\PersonalExpenses\PersonalExpenses\PersonalExpenses.iOS\bin\iPhoneSimulator\Debug\Microsoft.AppCenter.Analytics.dll
+C:\Users\DRODRI18\Desktop\Trainings\Xamarin\PersonalExpenses\PersonalExpenses\PersonalExpenses.iOS\bin\iPhoneSimulator\Debug\Microsoft.AppCenter.Analytics.iOS.Bindings.dll
+C:\Users\DRODRI18\Desktop\Trainings\Xamarin\PersonalExpenses\PersonalExpenses\PersonalExpenses.iOS\bin\iPhoneSimulator\Debug\Microsoft.AppCenter.Crashes.dll
+C:\Users\DRODRI18\Desktop\Trainings\Xamarin\PersonalExpenses\PersonalExpenses\PersonalExpenses.iOS\bin\iPhoneSimulator\Debug\Microsoft.AppCenter.Crashes.iOS.Bindings.dll
+C:\Users\DRODRI18\Desktop\Trainings\Xamarin\PersonalExpenses\PersonalExpenses\PersonalExpenses.iOS\bin\iPhoneSimulator\Debug\Microsoft.AppCenter.Push.dll
+C:\Users\DRODRI18\Desktop\Trainings\Xamarin\PersonalExpenses\PersonalExpenses\PersonalExpenses.iOS\bin\iPhoneSimulator\Debug\Microsoft.AppCenter.Push.iOS.Bindings.dll
