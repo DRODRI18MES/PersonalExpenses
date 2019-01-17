@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:PersonalExpenses.ViewModel"
+             x:Class="PersonalExpenses.View.ExpenseDetailsPage">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <vm:ExpenseDetailsVM x:Key="vm"></vm:ExpenseDetailsVM>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <StackLayout Margin="16, 20, 16, 0" BindingContext="{StaticResource vm}">
+            <Label Text="Nombre:" Style="{StaticResource subtitleLabel}"/>
+            <Label TextColor="{StaticResource visteonColor}" Text="{Binding Selected.Name}" Style="{StaticResource mainvalueLabel}"/>
+            <Label Text="Cantidad gastada:" Style="{StaticResource subtitleLabel}"/>
+            <Label TextColor="{StaticResource visteonColor}" Text="{Binding  Selected.Amount}" Style="{StaticResource mainvalueLabel}"/>
+            <Label Text="Fecha de gasto:" Style="{StaticResource subtitleLabel}"/>
+            <Label TextColor="{StaticResource visteonColor}" Text="{Binding  Selected.Date}" Style="{StaticResource mainvalueLabel}"/>
+            <Label Text="Categoria del gasto:" Style="{StaticResource subtitleLabel}"/>
+            <Label TextColor="{StaticResource visteonColor}" Text="{Binding  Selected.Category}" Style="{StaticResource mainvalueLabel}"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

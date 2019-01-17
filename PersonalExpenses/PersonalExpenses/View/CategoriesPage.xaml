@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:PersonalExpenses.ViewModel"
+             x:Class="PersonalExpenses.View.CategoriesPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <vm:CategoriesVM x:Key="vm"></vm:CategoriesVM>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Categorías" FontAttributes="Bold" FontSize="15" Margin="16,0,0,0" x:Name="titleLabel">
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup Name="OrientationStates">
+                            <VisualState Name="Portrait">
+                                <VisualState.Setters>
+                                    <Setter Property="IsVisible" Value="true"></Setter>
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState Name="Landscape">
+                                <VisualState.Setters>
+                                    <Setter Property="IsVisible" Value="false"></Setter>
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+                </Label>
+                <ImageButton Source="download" 
+                             Command="{Binding Source={StaticResource vm}, Path=ExportButtonCommand}" 
+                             CommandParameter="{Binding Source={StaticResource vm}, Path=HasProgresses}"
+                             Margin="20,0,0,0" WidthRequest="30" HeightRequest="10" BackgroundColor="{StaticResource visteonColor}">
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup Name="CommonStates">
+                            <VisualState Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter Property="Scale" Value="1"></Setter>
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState Name="Pressed">
+                                <VisualState.Setters>
+                                    <Setter Property="Scale" Value="0.8"></Setter>
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState Name="Disabled">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="LightGray"></Setter>
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+                </ImageButton>
+            </StackLayout>
+            
+            <ListView ItemsSource="{Binding Source={StaticResource vm}, Path=Progresses}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell StyleId="{OnPlatform Android=blue, iOS=disclosure-indicator}">
+                            <StackLayout  Margin="16,0">
+                                <Label Text="{Binding Name}"/>
+                                <ProgressBar ProgressColor="{StaticResource visteonColor}"  Progress="{Binding ProgressValue}"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

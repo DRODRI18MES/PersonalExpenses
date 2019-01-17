@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:PersonalExpenses.ViewModel"
+             xmlns:m="clr-namespace:PersonalExpenses.Model"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             xmlns:me="clr-namespace:PersonalExpenses.View.MarkupExtensions"
+             ios:Page.UseSafeArea="true"
+             x:Class="PersonalExpenses.View.NewExpensePage"
+             Title="Nuevo gasto">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <vm:NewExpensesVM x:Key="vm"></vm:NewExpensesVM>
+            <m:Category x:Key="m"></m:Category>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Guardar"
+                 Command="{Binding Source={StaticResource vm}, Path=SaveExpenseCommand}"/>
+    </ContentPage.ToolbarItems>
+
+    <StackLayout Margin="16, 20, 16, 0" BindingContext="{StaticResource vm}">
+        <Label Text="{me:Translate ResourceName=expense}" Style="{StaticResource subtitleLabel}"/>
+        <Entry Text="{Binding Name, Mode=TwoWay}" Placeholder=""/>
+        <Label Text="{me:Translate ResourceName=ammount}" Style="{StaticResource subtitleLabel}"/>
+        <Entry Text="{Binding Amount, StringFormat='{0:c}', Mode=TwoWay}" Placeholder=""
+               Keyboard="Numeric"/>
+        <Label Text="{me:Translate ResourceName=date}" Style="{StaticResource subtitleLabel}"/>
+        <DatePicker Date="{Binding Date, Mode=TwoWay}"/>
+        <Label Text="{me:Translate ResourceName=category}" Style="{StaticResource subtitleLabel}"/>
+        <Picker ItemsSource="{Binding Categories}"
+            SelectedItem="{Binding Category, Mode=TwoWay}"/>
+    </StackLayout>
+
+</ContentPage>
